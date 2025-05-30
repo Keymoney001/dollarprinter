@@ -5,7 +5,7 @@ import {
     LegacyHomeNewIcon as TradershubLogo,
     LegacyReportsIcon as ReportsLogo,
     LegacyChartsIcon as AnalysisLogo,
-    LegacyTradingHubIcon as CopyTradingLogo,
+    LegacyTransferIcon as CopyTradingLogo,
 } from '@deriv/quill-icons/Legacy';
 import {
     DerivProductBrandLightDerivBotLogoWordmarkIcon as DerivBotLogo,
