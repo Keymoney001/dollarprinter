@@ -4,6 +4,8 @@ import {
     LegacyCashierIcon as CashierLogo,
     LegacyHomeNewIcon as TradershubLogo,
     LegacyReportsIcon as ReportsLogo,
+    LegacyChartsIcon as AnalysisLogo,
+    LegacyTradingHubIcon as CopyTradingLogo,
 } from '@deriv/quill-icons/Legacy';
 import {
     DerivProductBrandLightDerivBotLogoWordmarkIcon as DerivBotLogo,
@@ -38,6 +40,40 @@ export type TAccount = {
     loginid: string;
     token: string;
     type: string;
+};
+
+export const MenuItems: MenuItemsConfig[] = [
+    {
+        as: 'a',
+        href: standalone_routes.reports,
+        icon: <ReportsLogo />,
+        label: 'Reports',
+    },
+    {
+        as: 'a',
+        href: '/analysis',
+        icon: <AnalysisLogo />,
+        label: 'Analysis Tool',
+    },
+    {
+        as: 'a',
+        href: '/copy-trading',
+        icon: <CopyTradingLogo />,
+        label: 'Copy Trading',
+    },
+    {
+        as: 'a',
+        href: standalone_routes.cashier_deposit,
+        icon: <CashierLogo />,
+        label: 'Cashier',
+    },
+];
+
+export const TRADERS_HUB_LINK_CONFIG = {
+    as: 'a' as const,
+    href: standalone_routes.deriv_app,
+    icon: <TradershubLogo />,
+    label: "Trader's Hub",
 };
 
 export const platformsConfig: PlatformsConfig[] = [
