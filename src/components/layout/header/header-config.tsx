@@ -46,33 +46,33 @@ export const MenuItems: MenuItemsConfig[] = [
     {
         as: 'a',
         href: standalone_routes.reports,
-        icon: <ReportsLogo />,
-        label: 'Reports',
+        icon: <ReportsLogo iconSize='xs' />,
+        label: localize('Reports'),
     },
     {
         as: 'a',
         href: '/analysis',
-        icon: <AnalysisLogo />,
-        label: 'Analysis Tool',
+        icon: <AnalysisLogo iconSize='xs' />,
+        label: localize('Analysis Tool'),
     },
     {
         as: 'a',
         href: '/copy-trading',
-        icon: <CopyTradingLogo />,
-        label: 'Copy Trading',
+        icon: <CopyTradingLogo iconSize='xs' />,
+        label: localize('Copy Trading'),
     },
     {
         as: 'a',
-        href: standalone_routes.cashier_deposit,
-        icon: <CashierLogo />,
-        label: 'Cashier',
+        href: standalone_routes.cashier,
+        icon: <CashierLogo iconSize='xs' />,
+        label: localize('Cashier'),
     },
 ];
 
 export const TRADERS_HUB_LINK_CONFIG = {
     as: 'a' as const,
-    href: standalone_routes.deriv_app,
-    icon: <TradershubLogo />,
+    href: standalone_routes.traders_hub,
+    icon: <TradershubLogo iconSize='xs' />,
     label: "Trader's Hub",
 };
 
@@ -96,31 +96,9 @@ export const platformsConfig: PlatformsConfig[] = [
     {
         active: false,
         buttonIcon: <SmarttraderLogo height={24} width={115} />,
-        description: localize('Trade the world’s markets with our popular user-friendly platform.'),
+        description: localize('Trade the world\'s markets with our popular user-friendly platform.'),
         href: standalone_routes.smarttrader,
         icon: <SmarttraderLogo height={32} width={153} />,
         showInEU: false,
-    },
-];
-
-export const TRADERS_HUB_LINK_CONFIG = {
-    as: 'a',
-    href: standalone_routes.traders_hub,
-    icon: <TradershubLogo iconSize='xs' />,
-    label: "Trader's Hub",
-};
-
-export const MenuItems: MenuItemsConfig[] = [
-    {
-        as: 'a',
-        href: standalone_routes.reports,
-        icon: <ReportsLogo iconSize='xs' />,
-        label: localize('Reports'),
-    },
-    {
-        as: 'a',
-        href: standalone_routes.cashier,
-        icon: <CashierLogo iconSize='xs' />,
-        label: localize('Cashier'),
     },
 ];
