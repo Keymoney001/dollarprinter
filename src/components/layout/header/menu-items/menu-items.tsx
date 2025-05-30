@@ -15,21 +15,15 @@ export const MenuItems = observer(() => {
     return (
         <>
             {is_logged_in &&
-                (isDesktop ? (
-                    items.map(({ as, href, icon, label }) => (
-                        <MenuItem as={as} className='app-header__menu' href={href} key={label} leftComponent={icon}>
-                            <Text>{localize(label)}</Text>
-                        </MenuItem>
-                    ))
-                ) : (
-                    <MenuItem
-                        as={items[1].as}
-                        className='flex gap-2 p-5'
-                        href={items[1].href}
-                        key={items[1].label}
-                        leftComponent={items[1].icon}
+                items.map(({ as, href, icon, label }) => (
+                    <MenuItem 
+                        as={as} 
+                        className={isDesktop ? 'app-header__menu' : 'flex gap-2 p-5'} 
+                        href={href} 
+                        key={label} 
+                        leftComponent={icon}
                     >
-                        <Text>{localize(items[1].label)}</Text>
+                        <Text>{localize(label)}</Text>
                     </MenuItem>
                 ))}
         </>
